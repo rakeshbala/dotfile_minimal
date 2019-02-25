@@ -1,0 +1,32 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	co = checkout
+	remotes = remote -v
+	last = log -1 HEAD
+	diffw = diff --color-words
+	diffbare = diff --ignore-space-at-eol -b -w
+	diffc = diff --color
+	pr = pull-request
+	po = pull origin master
+[rebase]
+	autosquash = true
+[pull]
+	rebase = true
+[push]
+	default = simple
+[color]
+	ui = true
+[core]
+	editor = vi
+	autocrlf = input
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[crdential]
+	helper = store
+[credential]
+	helper = store
+[user]
+	name = Rakesh Balasubramanian
